@@ -1,0 +1,10 @@
+#pragma once
+
+const int32 COMPANION_BERSERKER = 1001;
+const int32 COMPANION_GREY_WARDEN = 1002;
+const int32 COMPANION_BLOODMAGE = 1003;
+const int32 COMPANION_SPIRIT_HEALER = 1004;
+const int32 COMPANION_BARD = 1005;
+const int32 COMPANION_ASSASSIN = 1006;
+
+FString GetCompanionName(int32 nClassId);

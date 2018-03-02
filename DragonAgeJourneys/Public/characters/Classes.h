@@ -1,0 +1,58 @@
+#pragma once
+
+class UGameCharacter;
+class UTalentLine;
+
+const int32 CLASS_UNDEFINED = 0;
+const int32 CLASS_WARRIOR = 1;
+const int32 CLASS_ROGUE = 2;
+const int32 CLASS_MAGE = 3;
+const int32 CLASS_BERSERKER = 4;
+const int32 CLASS_CHAMPION = 5;
+const int32 CLASS_BARD = 6;
+const int32 CLASS_ASSASSIN = 7;
+const int32 CLASS_BLOODMAGE = 8;
+const int32 CLASS_SPIRIT_HEALER = 9;
+const int32 CLASS_HURLOCK = 100;
+const int32 CLASS_HURLOCK_ARCHER = 101;
+const int32 CLASS_HURLOCK_ALPHA = 102;
+const int32 CLASS_HURLOCK_EMISSARY = 103;
+const int32 CLASS_GENLOCK = 104;
+const int32 CLASS_GENLOCK_ARCHER = 105;
+const int32 CLASS_GENLOCK_ALPHA = 106;
+const int32 CLASS_GENLOCK_EMISSARY = 107;
+const int32 CLASS_SHRIEK = 108;
+const int32 CLASS_OGRE = 109;
+const int32 CLASS_SPIDER_CORRUPTED = 110;
+const int32 CLASS_SPIDER_CORRUPTED_SMALL = 111;
+const int32 CLASS_SPIDER_GIANT = 112;
+const int32 CLASS_SPIDER_GIANT_SMALL = 113;
+const int32 CLASS_DRAGONLING = 114;
+const int32 CLASS_DRAKE = 115;
+const int32 CLASS_DRAGON = 116;
+const int32 CLASS_CULTIST = 117;
+const int32 CLASS_BANDIT = 120;
+const int32 CLASS_CORRUPTED_DWARF = 121;
+const int32 CLASS_DEEP_STALKER = 122;
+const int32 CLASS_STONE_GOLEM = 123;
+const int32 CLASS_CARTA_ROGUE = 130;
+const int32 CLASS_BRIGAND_ROGUE = 135;
+const int32 CLASS_BRIGAND_WARRIOR = 136;
+const int32 CLASS_GENLOCK_RUNT = 140;
+const int32 CLASS_GENLOCK_ARCHER_RUNT = 141;
+const int32 CLASS_HURLOCK_RUNT = 142;
+const int32 CLASS_HURLOCK_ARCHER_RUNT = 143;
+const int32 CLASS_DEEP_STALKER_BABY = 144;
+
+void SetBaseStats(UGameCharacter* gameCharacter);
+bool UsesMana(int32 nClassId);
+int32 BaseSpeedFor(int32 nClassId);
+int32 BaseAttackFor(int32 nClassId);
+int32 BaseDefenseFor(int32 nClassId);
+int32 BaseArmorFor(int32 nClassId);
+int32 GetBaseClassOf(int32 nClassId);
+FString GetDescriptionForClass(int32 nClassId); 
+FString GetConversationDescription(int32 nClassId);
+FString GetNameForClass(int32 nClassId);
+FString PowerString(int32 nClassId);
+TArray<UTalentLine*> GetTalentsForClass(UGameCharacter* gameCharacter);
